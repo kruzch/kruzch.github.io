@@ -1,0 +1,190 @@
+:root {
+    --greek-blue: #0d5eaf;
+    --greek-light-blue: #71a6d2;
+    --greek-white: #f7f7f7;
+    --greek-stone: #dcd7c9;
+    --olive-green: #3F4739;
+    --terracotta: #884535;
+    --mediterranean-sand: #f5e6ca;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', 'Times New Roman', serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--greek-white);
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230d5eaf' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 20h40v20H0zm0-20h20v20H0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Header styles with Greek-inspired design */
+.header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(13, 94, 175, 0.8), rgba(13, 94, 175, 0.9)),
+                url('https://wallpapers.com/images/featured/greek-background-pjo0sl5u8uzz3aah.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--greek-white);
+    border-bottom: 15px solid var(--greek-white);
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--greek-blue),
+        var(--greek-blue) 20px,
+        var(--greek-white) 20px,
+        var(--greek-white) 40px
+    );
+}
+
+.header h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header h1::after {
+    content: "";
+    display: block;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.header p {
+    font-size: 22px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Main section styles with Mediterranean flair */
+.main-sections {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Card styles with Greek architectural influences */
+.section-card {
+    background: var(--greek-white);
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid var(--greek-blue);
+}
+
+.section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--greek-blue),
+        var(--greek-blue) 10px,
+        var(--greek-light-blue) 10px,
+        var(--greek-light-blue) 20px
+    );
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 94, 175, 0.2);
+}
+
+.section-card h2 {
+    color: var(--greek-blue);
+    margin: 20px 0 15px 0;
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    border-bottom: 2px solid var(--greek-light-blue);
+    padding-bottom: 10px;
+}
+
+.section-card p {
+    color: var(--olive-green);
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Footer styles with Greek pattern */
+.footer {
+    background-color: var(--greek-blue);
+    color: var(--greek-white);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--greek-white),
+        var(--greek-white) 15px,
+        transparent 15px,
+        transparent 30px
+    );
+}
+
+/* Greek-inspired decorative elements */
+@media (max-width: 768px) {
+    .header {
+        padding: 40px 20px;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+    .main-sections {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .section-card h2 {
+        font-size: 24px;
+    }
+}
